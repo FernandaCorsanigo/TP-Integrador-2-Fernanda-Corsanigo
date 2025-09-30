@@ -1,12 +1,12 @@
 import React from 'react'
 import ContactList from '../../Componentes/ContactList/ContactList'
-import Navbar from '../../Componentes/Navbar/Navbar'
+import NavBar from '../../Componentes/NavBar/NavBar'
 
 const HomeScreen = () => {
     return (
         <div>
             <div>
-                <Navbar/>
+                <NavBar/>
             </div>
             <div className='contact-list'>
                 <ContactList/>
