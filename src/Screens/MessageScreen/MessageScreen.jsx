@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import MessagesList from '../../Componentes/MessagesList/MessagesList';
-import Navbar from '../../Componentes/Navbar/Navbar';
+import NavBar from '../../Componentes/NavBar/NavBar';
 import NewMessageForm from '../../Componentes/NewMessageForm/NewMessageForm';
 import { useParams } from 'react-router';
 import { getContactById } from '../../Componentes/services/contactservice';
@@ -94,7 +94,7 @@ function MessageScreen() {
     return (
         <div className='message-screen'>
             <div className='message-screen__navbar'>
-                <Navbar />
+                <NavBar />
             </div>
             <div className='message-screen__contact-list-container'>
                 <ContactList />
