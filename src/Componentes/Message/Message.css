@@ -1,0 +1,35 @@
+.message_container{
+    padding: 5px;
+    box-sizing: border-box;
+    width: 500px;
+    border-radius: 8px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.message_container.me{
+    align-self: flex-end;
+    background-color: #dcf8c6;
+}
+
+.message_container.other{
+    align-self: flex-start;
+    background-color: #fff;
+}
+
+.author_name{
+    font-weight: 600;
+}
+
+.message_text{
+    text-align: left;
+}
+
+.message_time{
+    font-size: 14px;
+    text-align: right;
+    align-self: flex-end;
+}
+
