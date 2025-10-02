@@ -12,7 +12,7 @@ function MessageScreen() {
     const{isContactDetailLoading, contactDetailed, onCreateNewMessage} = useContext(ContactDetailContext)
 
     return (
-        <div className='message-screen'>
+        <div className='message-screen-container'>
             <div className='message-screen__navbar'>
                 <NavBar />
             </div>

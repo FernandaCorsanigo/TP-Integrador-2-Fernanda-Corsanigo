@@ -1,4 +1,4 @@
-.message-screen{
+.message-screen-container{
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -23,12 +23,11 @@
     flex-direction: column;
     position: relative;
     padding-bottom: 60px;
-}
-.messages-list-container{
     flex: 1;                   
     overflow-y: auto;           
     min-width: 0;
 }
+
 .message-screen__new-message-container{
     position: absolute;
     display: flex;
