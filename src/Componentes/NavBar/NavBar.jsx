@@ -1,91 +1,94 @@
 import React, { useState } from 'react'
 import './NavBar.css'
+import ICONS from '../constants/icons'
 
 
 const Navbar = () => {
-    const [isOpen, setIsOpen]= useState(false)
+    const [isOpen, setIsOpen] = useState(false)
     const toggleMenu = () => {
         setIsOpen(!isOpen)
-        }
-        
+    }
+
     return (
         <div className='nav-container'>
-            <button className='btn-menu' 
+            <button
                 onClick={toggleMenu}>
-                <i className="bi bi-list"></i>
+                <ICONS.Burger />
             </button>
             <nav className='nav-compressed'>
-                <div className='nav-top'>
+                <div className='nav-compressed_top'>
                     <a href="">
-                        <i className='bi bi-chat-text'></i> 
+                        <ICONS.Chat />
                     </a>
                     <a href="">
-                        <i className='bi bi-telephone'></i>
+                        <ICONS.Phone />
                     </a>
                     <a href="">
-                        <i className='bi bi-circle'></i>
+                        <ICONS.Status />
                     </a>
                     <a href="">
-                        <i className='bi bi-meta'></i>
+                        <ICONS.MetaAI />
                     </a>
                 </div>
-                <div className='nav-bottom'>
+                <div className='nav-compressed_bottom'>
                     <a href="">
-                        <i className='bi bi-star'></i>
+                        <ICONS.Star />
                     </a>
                     <a href="">
-                        <i className='bi bi-archive'></i>
+                        <ICONS.Archive />
                     </a>
                     <a href="">
-                        <i className='bi bi-gear'></i>
+                        <ICONS.Settings />
                     </a>
                     <a href="">
-                        <i className='bi bi-person'></i>
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" className="profile-picture" />
                     </a>
                 </div>
             </nav>
-        {   
-            isOpen &&
-            <nav className='nav-extended'>
-                <div className='nav-top'>
-                    <a href="">
-                        <i className='bi bi-chat-text'></i> 
-                        Chats
-                    </a>
-                    <a href="">
-                        <i className='bi bi-telephone'></i> 
-                        Calls
-                    </a>
-                    <a href="">
-                        <i className='bi bi-circle'></i>
-                        Status
-                    </a>
-                    <a href="">
-                        <i className='bi bi-meta'></i>
-                        Meta AI
-                    </a>
+            {
+                isOpen &&
+                <nav className='nav-extended'>
+                    <div className='nav-extended_top'>
+                        <button className='btn-menu-extended'><ICONS.Burger className='btn-menu-extended' /></button>
+
+                        <a href="">
+                            Chats
+                            <span className="icon-placeholder" />
+                        </a>
+                        <a href="">
+                            Calls
+                            <span className="icon-placeholder" />
+                        </a>
+                        <a href="">
+                            Status
+                            <span className="icon-placeholder" />
+                        </a>
+                        <a href="">
+                            Meta AI
+                            <span className="icon-placeholder" />
+                        </a>
                     </div>
-                    <div className='nav-bottom'>
-                    <a href="">
-                        <i className='bi bi-star'></i>
-                        Starred messages
-                    </a>
-                    <a href="">
-                        <i className='bi bi-archive'></i>
-                        Archived chats
-                    </a>
-                    <a href="">
-                        <i className='bi bi-gear'></i>
-                        Setting
-                    </a>
-                    <a href="">
-                        <i className='bi bi-person'></i>
-                        Profile
-                    </a>
-                </div>
-            </nav>
+                    <div className='nav-extended_bottom'>
+                        <a href="">
+                            Starred messages
+                            <span className="icon-placeholder" />
+                        </a>
+                        <a href="">
+                            Archived chats
+                            <span className="icon-placeholder" />
+                        </a>
+                        <a href="">
+                            Setting
+                            <span className="icon-placeholder" />
+                        </a>
+                        <a href="">
+                            Profile
+                            <span className="picture-placeholder" />
+                        </a>
+                    </div>
+                </nav>
             }
-        </div>       
+        </div>
     )
 }
 

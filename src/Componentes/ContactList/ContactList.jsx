@@ -1,21 +1,33 @@
 import React, { use, useState } from "react";
-import "./ContactList.css";
 import { useContext } from "react";
 import ContactItem from "../ContactItem/ContactItem";
 import { ContactListContext } from "../../Contexts/ContactListContext";
+import './ContactList.css'
+import SearchBar from "../SearchBar/SearchBar";
+import Spinner from "../Spinner/Spinner";
 
-function ContactList() {
-    const { contactList } = useContext(ContactListContext);
+const ContactList = () => {
+    const { contactList, isContactListLoading } = useContext(ContactListContext);
 
     return (
-        <div className="searchbar">
-            <input
-                type="text"
-                placeholder="Search or start a new"
-                className="search-bar" />
-            {contactList.map((contact) => (
-                <ContactItem key={contact.id} contact={contact} />
-            ))}
+        <div className="contact-list-container">
+            {
+                isContactListLoading
+                ? <Spinner/>
+                : <>
+                    <SearchBar/>
+                    {contactList.map((contact) => {
+                        return ( 
+                            <ContactItem
+                                className="contact-item"    key={contact.id} 
+                                contact={contact}
+                            />
+                            )
+                        }
+                    )
+                }
+                </>
+            }    
         </div>
     );
 }

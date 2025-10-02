@@ -1,59 +1,65 @@
+.contact-link{
+    cursor: default;
+    text-decoration: none; /* quita subrayado */
+    color: inherit; /* mantiene el color del texto */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: default; /* flecha en lugar de manito */
+    transition: background-color 0.2s;
+    background-color: rgb(255, 254, 254);
+}
+
 .contact {
     display: flex;
     align-items: center;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-bottom: 1px solid #222d34;
+    padding: 10px;
     transition: background-color 0.2s;
+    width: 100%;
 }
 
 .contact:hover {
-    background-color: #2a3942;
+    background-color: #f2f2f2; /* efecto hover claro como WhatsApp */
 }
 
-.contact.selected {
-    background-color: #2a3942;
-}
-
-/* Avatar */
 .avatar {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    object-fit: cover;
     margin-right: 12px;
 }
 
 .contact-info {
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6; /* separador entre contactos */
+    padding-bottom: 10px;
+    min-width: 0;  
 }
 
 .contact-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 4px;
 }
 
 .contact-name {
-    font-size: 15px;
-    font-weight: bold;
-    color: #e9edef;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-weight: 500;
+    font-size: 16px;
+    color: #111; /* negro suave */
 }
 
 .contact-time {
     font-size: 12px;
-    color: #8696a0;
-    margin-left: 10px;
+    color: #999; /* gris tenue */
 }
 
-.last-message {
-    font-size: 13px;
-    color: #8696a0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.contact-info span {
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 4px;
 }
-

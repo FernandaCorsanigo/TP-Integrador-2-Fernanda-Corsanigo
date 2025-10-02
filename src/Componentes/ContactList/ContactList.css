@@ -1,36 +1,21 @@
 .contact-list-container {
-    overflow-y: scroll;
-}
-
-.sidebar {
-    width: 320px;
+    overflow-y: auto;
     height: 100vh;
-    background-color: #111b21;
+    width: 400px;
+    background-color: #ffffff; /* gris claro de fondo */
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #222d34;
+    border-right: 1px solid #ccc; /* separador más suave */
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0 20px;
 }
 
-/* Search bar */
-.search-bar {
-    padding: 10px;
-    border-bottom: 1px solid #222d34;
+
+
+.contact-item:hover {
+    background-color: #e0e0e0; /* hover suave */
 }
 
-.search-bar input {
-    width: 100%;
-    background-color: #202c33;
-    color: #e9edef;
-    font-size: 14px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 6px;
-}
 
-.search-bar input::placeholder {
-    color: #8696a0;
-}
-
-.search-bar input:focus {
-    outline: none;
-}

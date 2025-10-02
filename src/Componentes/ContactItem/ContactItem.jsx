@@ -5,7 +5,7 @@ import { Link } from "react-router";
 const ContactItem = (props) => {
     const contact = props.contact
     return(
-        <Link to={'/contact/' + contact.id}>
+        <Link to={'/contact/' + contact.id} className="contact-link">
         <div className="contact">
             <img src={contact.avatar} alt="" className="avatar"/>
             <div className="contact-info">

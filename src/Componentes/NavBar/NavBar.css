@@ -1,11 +1,27 @@
-.nav-container{
+/* Contenedor principal */
+.nav-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-top: 16px;
     gap: 16px;
-    width: 50px;
+    width: 52px;
+    position: relative;
+    height: 100vh;
+    border-radius: 8px;
+    background-color: rgb(247, 245, 242);
 }
 
-.nav-compressed{
+/* Imagen de perfil */
+.profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Barra comprimida */
+.nav-compressed {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,43 +30,79 @@
     height: 100vh;
 }
 
-.nav-extended{
+.nav-compressed_top,
+.nav-compressed_bottom {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: left;
-    gap: 16px;
-    height: 100vh;
-    position: absolute; 
-    top: 39px;
-    background-color: white;
-}
-
-.nav-top{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    gap: 16px;
-}
-
-.nav-bottom{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    gap: 16px;
-}
-
-.nav-extended a{
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 0px;
+    gap: 16px;
 }
 
-.nav-extended a i{
+/* Links dentro de la barra comprimida */
+.nav-compressed_top a,
+.nav-compressed_bottom a {
+    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.nav-compressed_top a svg,
+.nav-compressed_bottom a svg{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Barra extendida */
+.nav-extended {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    padding-top: 16px;
+    top: 0;
+    left: 50px; /* al lado de la barra comprimida */
+    min-width: 200px;
+    height: 100vh;
+    background-color: white;
+    gap: 16px;
+}
+
+.nav-extended_top,
+.nav-extended_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Links dentro de la barra extendida */
+.nav-extended a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    height: 26px;
+    align-items: center;
+    justify-content: left;
+}
+
+/* Botón extendido invisible */
+.btn-menu-extended {
+    opacity: 0;
+    color: transparent;
+}
+
+/* Placeholders */
+.picture-placeholder {
+    display: inline-block;
     width: 50px;
+    height: 30px;
+    align-items: left;
+}
+
+.icon-placeholder {
+    height: 26px;
 }

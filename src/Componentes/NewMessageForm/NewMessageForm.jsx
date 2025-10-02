@@ -1,4 +1,5 @@
 import React from 'react'
+import './NewMessageForm.css'
 
 const NewMessageForm = (props) => {
 
@@ -12,7 +13,7 @@ const NewMessageForm = (props) => {
     }
 
     return (
-        <div>
+        <div className='new-message-form-container'>
             <form onSubmit={handleSubmit}>
                 <button>
                     <i className="bi bi-emoji-smile"></i>
