@@ -10,19 +10,21 @@ const NewMessageForm = (props) => {
         props.onCreateNewMessage(
             message_value
         )
+
+        form.message.value = ''
     }
 
     return (
         <div className='new-message-form-container'>
             <form onSubmit={handleSubmit}>
-                <button>
+                <button type='button'>
                     <i className="bi bi-emoji-smile"></i>
                 </button>
-                <button>
+                <button type='button'>
                     <i className="bi bi-paperclip"></i>
                 </button>
                 <textarea id='message' name='message' placeholder="Type a message" />
-                <button>
+                <button type='submit'>
                     <i className="bi bi-send"></i>
                 </button>
             </form>
