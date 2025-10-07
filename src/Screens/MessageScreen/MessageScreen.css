@@ -46,7 +46,7 @@
     background-color: transparent;
 }
 
-@media screen and (max-width: 740px){
+@media screen and (max-width: 909px){
     .message-screen-container{
         flex-direction: column;
         height: 100vh; 
@@ -66,4 +66,5 @@
     .message-screen__navbar{
         display: none;
     }
+
 }
