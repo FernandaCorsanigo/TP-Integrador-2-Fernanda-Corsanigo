@@ -1,6 +1,8 @@
 import React from "react";
 import "./ContactItem.css";
 import { Link } from "react-router";
+import { ContactListContext } from "../../Contexts/ContactListContext";
+ContactListContext
 
 const ContactItem = (props) => {
     const contact = props.contact
@@ -14,14 +16,12 @@ const ContactItem = (props) => {
                         {contact.name}
                     </span>
                     <span className="contact-time">
-                        {contact.time}
+                    {contact.messages[contact.messages.length - 1].timestamp}
                     </span>
                 </div>
                 <p className="last-message">
-                    {contact.lastMessage}
+                    {contact.messages[contact.messages.length - 1].content}
                 </p>
-                <span>En linea: {contact.is_connected? "Si" : "No"}
-                </span>
             </div>
         </div>
         </Link>

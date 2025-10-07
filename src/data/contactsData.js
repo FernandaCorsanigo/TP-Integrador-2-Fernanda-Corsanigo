@@ -4,8 +4,6 @@ const contacts=[
         name: "Miriam",
         avatar: "https://us.123rf.com/450wm/vihatran/vihatran2402/vihatran240201724/224358662-portrait-of-a-smiling-young-woman-in-glasses-and-a-sweater-in-the-field.jpg?ver=6",
         last_time_connected: "16 de Octubre 2024",
-        is_connected: false,
-        state: "Amo los libros",
         messages: [
         {
             id: 1,
@@ -74,15 +72,72 @@ const contacts=[
         name: "Franco",
         avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLTg8FFxBeejAa0SUQB5lqwzvQl8HZUUNdRw&s",
         last_time_connected: "16 de Septiembre 2025",
-        is_connected: true,
-        state: "Prefiero la naturaleza",
         messages: [
-            {
-                id: 1,
-                author: 'Franco',
-                content: "Si por suerte todo bien en el sur",
-                timestamp: '09:30'
-            }
+            { 
+                id: 1, 
+                author: 'Franco', 
+                content: "Hola! Como estas? Por acá todo bien", 
+                timestamp: '09:30' 
+            },
+
+            { 
+                id: 2, author: 'Yo', 
+                content: "¡Qué bueno! ¿Cómo está el clima por allá?", 
+                timestamp: '09:32' 
+            },
+
+            { 
+                id: 3, 
+                author: 'Franco', 
+                content: "Frío pero lindo, me encanta la tranquilidad", 
+                timestamp: '09:34' 
+            },
+
+            { 
+                id: 4, 
+                author: 'Yo', 
+                content: "Seguro. Extraño esas montañas 😍", timestamp: '09:36' 
+            },
+
+            { 
+                id: 5, 
+                author: 'Franco', 
+                content: "Tenés que venir a visitarme, hacemos una caminata", 
+                timestamp: '09:38' 
+            },
+
+            { 
+                id: 6, 
+                author: 'Yo', 
+                content: "De una, ¿cuándo te quedarías allá?", 
+                timestamp: '09:40' 
+            },
+
+            { 
+                id: 7,
+                author: 'Franco', 
+                content: "Hasta mediados de diciembre más o menos", 
+                timestamp: '09:42' 
+            },
+
+            { 
+                id: 8, 
+                author: 'Yo', 
+                content: "Buenísimo, capaz me escapo unos días en noviembre", 
+                timestamp: '09:45' },
+
+            { 
+                id: 9, 
+                author: 'Franco', 
+                content: "Avísame, así reservo la cabaña 👌", 
+                timestamp: '09:47' 
+            },
+
+            { id: 10, 
+            author: 'Yo', 
+            content: "Listo, lo hablamos en la semana", 
+            timestamp: '09:49' 
+        }
         ]
         
     },
@@ -91,13 +146,11 @@ const contacts=[
         name: "Lourdes",
         avatar: "https://optisalud.cl/cdn/shop/collections/Coleccion_Mujer_1400x_40e49f41-fe7e-4cf6-9f63-e3edc8bedacb.jpg?v=1666118687&width=1400",
         last_time_connected: "ahora",
-        is_connected: true,
-        state: "Me encanta viajar",
         messages: [
             {
                 id: 1,
                 author: 'Lourdes',
-                content: "😂😂😂",
+                content: "Hola, este es mi nro para que me agendes! 😂😂😂",
                 timestamp: '19:30'
             }
         ]

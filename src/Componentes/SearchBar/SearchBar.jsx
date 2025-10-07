@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
+import ICONS from '../constants/icons';
 
 const SearchBar = () => {
     const [activeButton, setActiveButton] = useState('All');
@@ -15,10 +16,10 @@ const SearchBar = () => {
             </div>
 
             <div className="search-bar-container">
-                <i></i>
+                <ICONS.Loupe className='search-icon'/>
                 <input
                     type="text"
-                    placeholder="Search or start a new"
+                    placeholder="Search or start a new chat"
                     className='search-bar'
                 />
             </div>

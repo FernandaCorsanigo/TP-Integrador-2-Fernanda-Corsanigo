@@ -1,5 +1,7 @@
 import React from 'react'
 import './NewMessageForm.css'
+import ICONS from '../constants/icons'
+
 
 const NewMessageForm = (props) => {
 
@@ -7,6 +9,7 @@ const NewMessageForm = (props) => {
         event.preventDefault()
         const form = event.target
         const message_value = form.message.value
+        if (!message_value) return;
         props.onCreateNewMessage(
             message_value
         )
@@ -18,14 +21,18 @@ const NewMessageForm = (props) => {
         <div className='new-message-form-container'>
             <form onSubmit={handleSubmit}>
                 <button type='button'>
-                    <i className="bi bi-emoji-smile"></i>
+                    <ICONS.Smile className='icon'/>
                 </button>
                 <button type='button'>
-                    <i className="bi bi-paperclip"></i>
+                    <ICONS.Paperclip className='icon'/>
                 </button>
-                <textarea id='message' name='message' placeholder="Type a message" />
+                <textarea 
+                id='message' 
+                name='message' 
+                placeholder="Type a message"
+                />
                 <button type='submit'>
-                    <i className="bi bi-send"></i>
+                    <ICONS.Send className='icon'/>
                 </button>
             </form>
         </div>

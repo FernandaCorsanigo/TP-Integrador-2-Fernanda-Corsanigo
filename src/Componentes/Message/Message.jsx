@@ -15,12 +15,15 @@ function Message (propiedades){
         <h3 className="author_name">
             {propiedades.author}
         </h3>
-        <p className='message_text'>
-            {propiedades.content}
-        </p>
-        <span className='message_time'>
-            {propiedades.timestamp}
-        </span>
+        <div className='message'>
+            <p className='message_text'>
+                {propiedades.content}
+            </p>
+            <span className='message_time'>
+                <span className='placeholder'></span>
+                {propiedades.timestamp}
+            </span>
+        </div>
     </div>
     )
 }

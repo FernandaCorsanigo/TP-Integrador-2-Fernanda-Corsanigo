@@ -1,31 +1,82 @@
-.contact_header{
+.contact-header-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 60px;
-    min-height: 60px;
+    min-height: 70px;
+    background-color: white;
+    padding-left: 10px;
 }
-.contact_header .avatar{
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.contact-header .avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    padding: 10px;
     object-fit: cover;
 }
 
-.contact_header span{
-    font-weight: bold;
-    font-size: 20px;
-    padding: 10px;
+.contact-header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 10px;
 }
 
-.contact_header button {
+.contact-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contact-header-buttons,
+.contact-header-buttons-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.contact-header-buttons {
+    padding: 25px;
+    justify-content: center;
+}
+
+.contact-header-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
     cursor: pointer;
-    margin-left: 10px;
-    font-size: 18px;
+    font-size: 25px;
     color: #555;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.contact-header-buttons-left {
+    border: 1px solid #adadad;
+    border-radius: 8px;
+    position: relative;
+}
+
+.contact-header-buttons-left .btn-phone::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background-color: #ccc;
+}
+
+.btn-video:hover,
+.btn-phone:hover,
+.btn-search:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }

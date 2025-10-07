@@ -1,12 +1,12 @@
 .contact-link{
     cursor: default;
-    text-decoration: none; /* quita subrayado */
-    color: inherit; /* mantiene el color del texto */
+    text-decoration: none; 
+    color: inherit; 
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
-    cursor: default; /* flecha en lugar de manito */
+    cursor: default; 
     transition: background-color 0.2s;
     background-color: rgb(255, 254, 254);
 }
@@ -20,7 +20,7 @@
 }
 
 .contact:hover {
-    background-color: #f2f2f2; /* efecto hover claro como WhatsApp */
+    background-color: #f2f2f2;
 }
 
 .avatar {
@@ -47,19 +47,16 @@
     margin-bottom: 4px;
 }
 
-.contact-name {
-    font-weight: 500;
-    font-size: 16px;
-    color: #111; /* negro suave */
-}
-
 .contact-time {
     font-size: 12px;
-    color: #999; /* gris tenue */
+    color: #4b4b4b; 
+    
 }
 
-.contact-info span {
-    font-size: 12px;
-    text-decoration: none;
-    margin-top: 4px;
+.last-message{
+    font-size: 14px;
+    color: #4b4b4b;
+    white-space: nowrap;       
+    overflow: hidden;         
+    text-overflow: ellipsis;
 }

@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <div className='nav-container'>
-            <button
+            <button className='btn-menu'
                 onClick={toggleMenu}>
                 <ICONS.Burger />
             </button>
@@ -45,9 +45,7 @@ const Navbar = () => {
                     </a>
                 </div>
             </nav>
-            {
-                isOpen &&
-                <nav className='nav-extended'>
+            <nav className={'nav-extended'+(isOpen ? ' nav-extended-open' : '')}>
                     <div className='nav-extended_top'>
                         <button className='btn-menu-extended'><ICONS.Burger className='btn-menu-extended' /></button>
 
@@ -86,8 +84,18 @@ const Navbar = () => {
                             <span className="picture-placeholder" />
                         </a>
                     </div>
-                </nav>
-            }
+            </nav>
+            <nav className='nav-simplified'>
+                    <a href="">
+                        <ICONS.Chat />
+                    </a>
+                    <a href="">
+                        <ICONS.Status />
+                    </a>
+                    <a href="">
+                        <ICONS.Phone />
+                    </a>
+            </nav>
         </div>
     )
 }

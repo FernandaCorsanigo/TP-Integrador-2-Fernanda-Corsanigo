@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Message from '../Message/Message'
 import './MessagesList.css'
 
@@ -16,10 +16,17 @@ const MessagesList = (props) => {
         )
         }
     )
-
+    const bottom_reference = useRef(null)
+    useEffect(
+        () => {
+            bottom_reference.current.scrollIntoView({behavior: "smooth"})
+        },
+        [props.messages]
+    )
     return (
     <div className="messages-container">
         {MessagesList_jsx}
+        <div ref={bottom_reference}></div>
     </div>
     )
 }
