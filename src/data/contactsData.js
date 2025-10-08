@@ -154,6 +154,34 @@ const contacts=[
                 timestamp: '19:30'
             }
         ]
+    },
+    {
+        id: 4,
+        name: "Lourdes",
+        avatar: "https://optisalud.cl/cdn/shop/collections/Coleccion_Mujer_1400x_40e49f41-fe7e-4cf6-9f63-e3edc8bedacb.jpg?v=1666118687&width=1400",
+        last_time_connected: "ahora",
+        messages: [
+            {
+                id: 1,
+                author: 'Lourdes',
+                content: "Hola, este es mi nro para que me agendes! 😂😂😂",
+                timestamp: '19:30'
+            }
+        ]
+    },
+        {
+        id: 5,
+        name: "Lourdes",
+        avatar: "https://optisalud.cl/cdn/shop/collections/Coleccion_Mujer_1400x_40e49f41-fe7e-4cf6-9f63-e3edc8bedacb.jpg?v=1666118687&width=1400",
+        last_time_connected: "ahora",
+        messages: [
+            {
+                id: 1,
+                author: 'Lourdes',
+                content: "Hola, este es mi nro para que me agendes! 😂😂😂",
+                timestamp: '19:30'
+            }
+        ]
     }
 ]
 

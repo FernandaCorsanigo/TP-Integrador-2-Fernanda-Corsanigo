@@ -18,12 +18,11 @@ const ContactList = () => {
 
     return (
         <div className="contact-list-container">
-            {
-                isContactListLoading
+            <SearchBar/>
+        <div className="contacts-scrollable">
+            {isContactListLoading
                 ? <Spinner/>
-                : <>
-                    <SearchBar/>
-                    {contactsFiltered.length === 0 
+                : <>{contactsFiltered.length === 0 
                 ? <span className="no-results">No se encontraron resultados.</span>
                 : contactsFiltered.map((contact) => {
                         return ( 
@@ -37,6 +36,7 @@ const ContactList = () => {
                 }
                 </>
             }    
+        </div>
         </div>
     );
 }

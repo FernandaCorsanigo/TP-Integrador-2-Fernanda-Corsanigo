@@ -5,6 +5,7 @@ import ICONS from '../constants/icons'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
+    const [activeTab, setActiveTab] = useState('Chats');
     const toggleMenu = () => {
         setIsOpen(!isOpen)
     }
@@ -45,56 +46,70 @@ const Navbar = () => {
                     </a>
                 </div>
             </nav>
-            <nav className={'nav-extended'+(isOpen ? ' nav-extended-open' : '')}>
-                    <div className='nav-extended_top'>
-                        <button className='btn-menu-extended'><ICONS.Burger className='btn-menu-extended' /></button>
+            <nav className={'nav-extended' + (isOpen ? ' nav-extended-open' : '')}>
+                <div className='nav-extended_top'>
+                    <button className='btn-menu-extended'><ICONS.Burger className='btn-menu-extended' /></button>
 
-                        <a href="">
-                            Chats
-                            <span className="icon-placeholder" />
-                        </a>
-                        <a href="">
-                            Calls
-                            <span className="icon-placeholder" />
-                        </a>
-                        <a href="">
-                            Status
-                            <span className="icon-placeholder" />
-                        </a>
-                        <a href="">
-                            Meta AI
-                            <span className="icon-placeholder" />
-                        </a>
-                    </div>
-                    <div className='nav-extended_bottom'>
-                        <a href="">
-                            Starred messages
-                            <span className="icon-placeholder" />
-                        </a>
-                        <a href="">
-                            Archived chats
-                            <span className="icon-placeholder" />
-                        </a>
-                        <a href="">
-                            Setting
-                            <span className="icon-placeholder" />
-                        </a>
-                        <a href="">
-                            Profile
-                            <span className="picture-placeholder" />
-                        </a>
-                    </div>
+                    <a href="">
+                        Chats
+                        <span className="icon-placeholder" />
+                    </a>
+                    <a href="">
+                        Calls
+                        <span className="icon-placeholder" />
+                    </a>
+                    <a href="">
+                        Status
+                        <span className="icon-placeholder" />
+                    </a>
+                    <a href="">
+                        Meta AI
+                        <span className="icon-placeholder" />
+                    </a>
+                </div>
+                <div className='nav-extended_bottom'>
+                    <a href="">
+                        Starred messages
+                        <span className="icon-placeholder" />
+                    </a>
+                    <a href="">
+                        Archived chats
+                        <span className="icon-placeholder" />
+                    </a>
+                    <a href="">
+                        Setting
+                        <span className="icon-placeholder" />
+                    </a>
+                    <a href="">
+                        Profile
+                        <span className="picture-placeholder" />
+                    </a>
+                </div>
             </nav>
             <nav className='nav-simplified'>
-                    <a href="">
-                        <ICONS.Chat />
-                    </a>
-                    <a href="">
-                        <ICONS.Status />
-                    </a>
-                    <a href="">
-                        <ICONS.Phone />
-                    </a>
+                <a href=""
+                    className={activeTab === 'Chats' ? 'active' : ''}
+                    onClick={() => setActiveTab('Chats')}
+                >
+                    <ICONS.Chat className='icon' />
+                    Chats
+                </a>
+
+                <a href=""
+                    className={activeTab === 'Status' ? 'active' : ''}
+                    onClick={() => setActiveTab('Status')}                
+                >
+                    <ICONS.Status className='icon'/>
+                    Novedades
+                </a>
+
+                <a href=""
+                    className={activeTab === 'Llamadas' ? 'active' : ''}
+                    onClick={() => setActiveTab('Llamadas')}                
+                >
+                    <ICONS.Phone className='icon' />
+                    Llamadas
+                </a>
             </nav>
         </div>
     )

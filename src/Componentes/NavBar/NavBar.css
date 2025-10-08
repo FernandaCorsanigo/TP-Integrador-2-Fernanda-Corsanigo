@@ -5,8 +5,7 @@
     padding-top: 16px;
     gap: 16px;
     width: 52px;
-    position: relative;
-    height: 100%;
+    height: 100vh;
     border-radius: 8px;
     background-color: rgb(247, 245, 242);
 }
@@ -69,15 +68,39 @@
     align-items: center;
     gap: 16px;
     background-color: rgb(247, 245, 242);
-    width: 100%;
-    height: 50px;
-    padding: 0px 20px;
+    width: 100% ;
+    padding: 0px 20px 20px;
+    height: 70px;
+}
+
+.nav-simplified a {
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .nav-simplified a svg{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 35px;
+    border-radius: 50px;
+    padding: 5px 10px;
 }
+
+.nav-simplified a.active {
+    font-weight: bold;  /* texto en negrita */
+}
+
+.nav-simplified a.active svg {
+    fill: #075E54;
+    stroke: #075E54;
+    background-color: #dcf8c6; /* verde oscuro solo icono */
+}
+
+
 
 .nav-extended {
     display: flex;
@@ -153,9 +176,8 @@
     .nav-container{
         flex-direction: row;
         width: 100%;
-        height: 50px;
-        position: absolute;
-        bottom: 0;
+        height: 70px;
+        min-width: 316px;
     }
 
     .nav-simplified{
