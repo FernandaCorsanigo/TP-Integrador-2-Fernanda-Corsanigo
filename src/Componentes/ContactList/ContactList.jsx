@@ -7,7 +7,14 @@ import SearchBar from "../SearchBar/SearchBar";
 import Spinner from "../Spinner/Spinner";
 
 const ContactList = () => {
-    const { contactList, isContactListLoading } = useContext(ContactListContext);
+    const { contactList, 
+            isContactListLoading,
+            onChangeSearchTerm,
+            searchTerm
+        } = useContext(ContactListContext);
+    const contactsFiltered = contactList.filter(contact =>
+    contact.name.toLowerCase().includes(searchTerm.toLowerCase())
+);
 
     return (
         <div className="contact-list-container">
@@ -16,7 +23,9 @@ const ContactList = () => {
                 ? <Spinner/>
                 : <>
                     <SearchBar/>
-                    {contactList.map((contact) => {
+                    {contactsFiltered.length === 0 
+                ? <span className="no-results">No se encontraron resultados.</span>
+                : contactsFiltered.map((contact) => {
                         return ( 
                             <ContactItem
                                 className="contact-item"    key={contact.id} 

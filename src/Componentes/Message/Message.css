@@ -54,3 +54,28 @@
 .placeholder{
     height: 14px;
 }
+
+
+@media screen and (max-width: 620px){
+    .message_container{
+        max-width: 485px;
+    }
+}
+
+@media screen and (max-width: 587px){
+    .message_container{
+        max-width: 469px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .message_container{
+        max-width: 360px;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .message_container{
+        max-width: 255px;
+    }
+}

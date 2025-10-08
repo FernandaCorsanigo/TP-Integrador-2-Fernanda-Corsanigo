@@ -5,13 +5,34 @@
     width: 100%;
     min-height: 70px;
     background-color: white;
-    padding-left: 10px;
+    padding-left: 20px;
+    margin: auto;
 }
 
 .contact-header {
     display: flex;
     align-items: center;
     background-color: white;
+    gap: 5px;
+    width: 100%;
+}
+
+.btn-phone-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0px;
+}
+
+
+.btn-back{
+    display: none
+}
+
+.btn-back svg{
+    width: 24px;
+    height: 24px;
 }
 
 .contact-header .avatar {
@@ -24,11 +45,19 @@
 .contact-header-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    flex: 1;
     margin: 10px;
+    min-width: 0;
+    overflow: hidden; 
+
 }
 
+.contact-time{
+    color: rgb(0, 0, 0);
+    white-space: nowrap;       
+    overflow: hidden;         
+    text-overflow: ellipsis;
+}
 .contact-name {
     font-weight: bold;
     font-size: 16px;
@@ -43,7 +72,8 @@
 
 .contact-header-buttons {
     padding: 25px;
-    justify-content: center;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .contact-header-buttons button {
@@ -81,8 +111,63 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+.btn-arrow-down svg{
+    width: 10px;
+    height: 10px;
+    padding-right: 0px;
+    display: block;
+}
+
+.btn-phone-container  .btn-arrow-down{
+    display: none ;
+    margin-left: -10px;
+}
+
 @media screen and (max-width: 909px){
     .contact-header-container .btn-search{
         display: none;
+    }
+
+    .contact-header-buttons-left {
+        border: none;
+        gap: 0px;
+    }
+    .contact-header-buttons button{
+        border-radius: 50px;
+    }
+    .contact-header-buttons-left .btn-phone::before {
+        display: none;
+    }
+    .contact-header-container{
+        padding-left: 5px;
+    }
+    .btn-back{
+        display: flex;
+    }
+    .contact-header-buttons-left .btn-video{
+        display: none;
+    }
+    .btn-phone-container  .btn-arrow-down{
+    display: flex;
+}
+.contact-header-buttons button{
+    padding: 10px 0px 10px 0px;
+}
+.contact-header-buttons{
+    padding: 25px 5px 25px 25px;
+}
+
+.btn-arrow-down:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+}
+
+@media screen and (max-width: 375px){
+    .contact-header-buttons{
+    padding: 25px 5px 25px 5px;
+
+}
+    .contact-header-info {
+        max-width: 130px;
     }
 }

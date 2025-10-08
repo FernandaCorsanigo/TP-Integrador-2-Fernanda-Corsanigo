@@ -33,11 +33,14 @@ const ContactDetailContextProvider = (props) => {
         [id_contact]
     )
     const onCreateNewMessage = (new_message) => {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0'); // agrega 0 si es menor a 10
+    const minutes = now.getMinutes().toString().padStart(2, '0');
         const new_message_object = {
             id: contactDetailed.messages.length + 1,
             author: 'Yo',
             content: new_message,
-            timestamp: '16:55'
+            timestamp: `${hours}:${minutes}`
         }
         setContactDetailed({...contactDetailed, messages:[...contactDetailed.messages, new_message_object]})
     }

@@ -30,7 +30,18 @@
     background-color: #f1f1f1;
     }
 
-@media screen and (max-width: 740px){
+.no-results{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #888;
+
+}    
+
+@media screen and (max-width: 909px){
     .contact-list-container{
         width: 100%;
         min-width: 316px;

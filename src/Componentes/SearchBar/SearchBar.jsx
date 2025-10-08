@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
 import ICONS from '../constants/icons';
+import { ContactListContext } from '../../Contexts/ContactListContext';
+import { useContext } from 'react';
 
 const SearchBar = () => {
+    const { searchTerm, onChangeSearchTerm } = useContext(ContactListContext);
     const [activeButton, setActiveButton] = useState('All');
 
     const handleButtonClick = (buttonName) => {
@@ -12,7 +15,7 @@ const SearchBar = () => {
     return (
         <div className='search-bar-section'>
             <div>
-                <h2>WhatsApp</h2>
+                <h1>WhatsApp</h1>
             </div>
 
             <div className="search-bar-container">
@@ -21,6 +24,8 @@ const SearchBar = () => {
                     type="text"
                     placeholder="Search or start a new chat"
                     className='search-bar'
+                    value={searchTerm}                
+                    onChange={onChangeSearchTerm}
                 />
             </div>
 

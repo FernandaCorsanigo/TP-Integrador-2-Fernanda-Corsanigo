@@ -1,8 +1,11 @@
 import { PiChatCircleTextLight, PiPhoneLight, PiCircleDashed,PiStarLight, PiVideoCameraLight } from "react-icons/pi";
-import { BsArchive, BsPaperclip, BsEmojiSmile, BsSend } from "react-icons/bs";
+import { BsArchive, BsPaperclip, BsEmojiSmile, BsSend, BsWhatsapp  } from "react-icons/bs";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { LiaSearchSolid } from "react-icons/lia";
+import { VscArrowLeft } from "react-icons/vsc";
+import { BiSolidDownArrow } from "react-icons/bi";
+import { HiOutlineLockClosed } from "react-icons/hi2";
 const MetaAIIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
         <defs>
@@ -28,7 +31,11 @@ const ICONS = {
     Video: PiVideoCameraLight,
     Smile: BsEmojiSmile,
     Paperclip: BsPaperclip,
-    Send: BsSend
+    Send: BsSend,
+    Arrow: VscArrowLeft,
+    ArrowDown: BiSolidDownArrow,
+    Whatsapp: BsWhatsapp,
+    Lock: HiOutlineLockClosed
 }
 
 export default ICONS
