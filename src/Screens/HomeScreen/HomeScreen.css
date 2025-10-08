@@ -1,8 +1,8 @@
 .home-screen-container {
     display: flex;
     flex-direction: row;
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     overflow: hidden;
     margin: auto;
     background-color: rgb(250, 250, 250);
@@ -71,7 +71,7 @@ h2 {
         width: 100%;
         min-width: 316px;
         overflow-y: hidden;
-        max-height: 100vh;
+        max-height: 100dvh;
     }
 
     .home-screen__contact-list-container {
@@ -95,7 +95,7 @@ h2 {
         width: 100%;
         min-width: 316px;
         overflow-y: hidden;
-        height: 100vh;
+        height: 100dvh;
     }
 
     .home-screen__contact-list-container {
