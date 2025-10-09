@@ -158,7 +158,7 @@ const contacts=[
     {
         id: 4,
         name: "Gonzalo",
-        avatar: "https://www.shutterstock.com/image-photo/portrait-handsome-bearded-man-headphones-260nw-2383568109.jpg",
+        avatar: "https://media.istockphoto.com/id/1323167284/photo/young-successful-indian-man-wearing-stylish-eyeglasses-standing-on-the-street-handsome-asian.jpg?s=612x612&w=0&k=20&c=gqsmYkDUEw5kQpuDvlFbkIGDy2-ISB6yK9zGe7rKlBI=",
         last_time_connected: "ahora",
         messages: [
         {
