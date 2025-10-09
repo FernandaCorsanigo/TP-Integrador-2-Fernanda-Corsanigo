@@ -1,16 +1,32 @@
+/* CONTENEDOR PRINCIPAL */
 .contact-list-container {
     height: 100dvh;
     width: 400px;
     background-color: #ffffff; 
     display: flex;
     flex-direction: column;
+    align-items: center;
     border-right: 1px solid #ccc;
     box-sizing: border-box;
     overflow: hidden;
     padding: 0 20px;
 }
 
-.contacts-scrollable{
+/*  SPINNER  */
+.spinner-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LISTA DE CONTACTOS  */
+.contacts-scrollable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     overflow-y: auto;
 }
 
@@ -18,39 +34,41 @@
     background-color: #e0e0e0;
 }
 
+/* SCROLLBAR PERSONALIZADO */
 .contact-list-container::-webkit-scrollbar {
     width: 4px;
-    }
+}
 
 .contact-list-container::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 2px;
-    }
+}
 
 .contact-list-container::-webkit-scrollbar-track {
     background-color: #f1f1f1;
-    }
+}
 
-.no-results{
+/* MENSAJE SIN RESULTADOS */
+.no-results {
     display: flex;
-    height: 100%;
-    width: 100%;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
     font-size: 18px;
     color: #888;
-
 }    
 
-@media screen and (max-width: 909px){
-    .contact-list-container{
+/* RESPONSIVE */
+@media screen and (max-width: 909px) {
+    .contact-list-container {
         width: 100%;
         min-width: 316px;
     }
 }
 
-@media screen and (max-width: 740px){
-    .contact-list-container{
+@media screen and (max-width: 740px) {
+    .contact-list-container {
         padding: 0 10px;
     }
 }

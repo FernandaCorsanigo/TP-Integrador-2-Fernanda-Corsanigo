@@ -21,9 +21,11 @@ const ContactList = () => {
             <SearchBar/>
         <div className="contacts-scrollable">
             {isContactListLoading
-                ? <Spinner/>
+                ? (<div className="spinner-container">
+                    <Spinner/>
+                </div>)
                 : <>{contactsFiltered.length === 0 
-                ? <span className="no-results">No se encontraron resultados.</span>
+                ? <span className="no-results">No results found.</span>
                 : contactsFiltered.map((contact) => {
                         return ( 
                             <ContactItem

@@ -2,7 +2,7 @@ const contacts=[
     {
         id: 1,
         name: "Miriam",
-        avatar: "https://us.123rf.com/450wm/vihatran/vihatran2402/vihatran240201724/224358662-portrait-of-a-smiling-young-woman-in-glasses-and-a-sweater-in-the-field.jpg?ver=6",
+        avatar: '/Images/miriam-avatar.jpg',
         last_time_connected: "16 de Octubre 2024",
         messages: [
         {
@@ -70,7 +70,7 @@ const contacts=[
     {
         id: 2,
         name: "Franco",
-        avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLTg8FFxBeejAa0SUQB5lqwzvQl8HZUUNdRw&s",
+        avatar: "/Images/franco-avatar.jpg",
         last_time_connected: "16 de Septiembre 2025",
         messages: [
             { 
@@ -144,7 +144,7 @@ const contacts=[
     {
         id: 3,
         name: "Lourdes",
-        avatar: "https://optisalud.cl/cdn/shop/collections/Coleccion_Mujer_1400x_40e49f41-fe7e-4cf6-9f63-e3edc8bedacb.jpg?v=1666118687&width=1400",
+        avatar: "/Images/lourdes-avatar.webp",
         last_time_connected: "ahora",
         messages: [
             {
@@ -158,7 +158,7 @@ const contacts=[
     {
         id: 4,
         name: "Gonzalo",
-        avatar: "https://media.istockphoto.com/id/1323167284/photo/young-successful-indian-man-wearing-stylish-eyeglasses-standing-on-the-street-handsome-asian.jpg?s=612x612&w=0&k=20&c=gqsmYkDUEw5kQpuDvlFbkIGDy2-ISB6yK9zGe7rKlBI=",
+        avatar: "/Images/gonzalo-avatar.jpg",
         last_time_connected: "ahora",
         messages: [
         {
@@ -190,7 +190,7 @@ const contacts=[
         {
         id: 5,
         name: "Mami",
-        avatar: "https://i.pinimg.com/736x/6c/ed/13/6ced133c99d2e3480c00f55b9ebf354b.jpg",
+        avatar: "/Images/mami-avatar.jpg",
         last_time_connected: "8 de Ocutubre 2025",
         messages: [
 {

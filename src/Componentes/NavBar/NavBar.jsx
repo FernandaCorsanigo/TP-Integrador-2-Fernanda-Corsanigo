@@ -1,123 +1,154 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './NavBar.css'
 import ICONS from '../constants/icons'
-
+import { Link } from 'react-router'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [activeTab, setActiveTab] = useState('Chats');
+    const menuRef = useRef(null)
+    const btnRef = useRef(null)
+
+
     const toggleMenu = () => {
         setIsOpen(!isOpen)
     }
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                isOpen && 
+                menuRef.current 
+                && !menuRef.current.contains(event.target)
+                &&
+                btnRef.current &&
+                !btnRef.current.contains(event.target)
+            ) {
+                setIsOpen(false)
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    },
+        [isOpen])
 
     return (
         <div className='nav-container'>
             <button className='btn-menu'
+                ref={btnRef}
                 onClick={toggleMenu}>
                 <ICONS.Burger />
             </button>
             <nav className='nav-compressed'>
                 <div className='nav-compressed_top'>
-                    <a href="">
+                    <Link to="">
                         <ICONS.Chat />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         <ICONS.Phone />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         <ICONS.Status />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         <ICONS.MetaAI />
-                    </a>
+                    </Link>
                 </div>
                 <div className='nav-compressed_bottom'>
-                    <a href="">
+                    <Link to="">
                         <ICONS.Star />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         <ICONS.Archive />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         <ICONS.Settings />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" className="profile-picture" />
-                    </a>
+                    </Link>
                 </div>
             </nav>
-            <nav className={'nav-extended' + (isOpen ? ' nav-extended-open' : '')}>
+            <nav
+                ref={menuRef}
+                className={'nav-extended' + (isOpen ? ' nav-extended-open' : '')}>
                 <div className='nav-extended_top'>
                     <button className='btn-menu-extended'><ICONS.Burger className='btn-menu-extended' /></button>
 
-                    <a href="">
+                    <Link to="">
                         Chats
                         <span className="icon-placeholder" />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         Calls
                         <span className="icon-placeholder" />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         Status
                         <span className="icon-placeholder" />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         Meta AI
                         <span className="icon-placeholder" />
-                    </a>
+                    </Link>
                 </div>
                 <div className='nav-extended_bottom'>
-                    <a href="">
+                    <Link to="">
                         Starred messages
                         <span className="icon-placeholder" />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         Archived chats
                         <span className="icon-placeholder" />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         Setting
                         <span className="icon-placeholder" />
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="">
                         Profile
                         <span className="picture-placeholder" />
-                    </a>
+                    </Link>
                 </div>
             </nav>
-            <nav className='nav-simplified'>
-                <a href=""
+            <nav className='nav-mobile'>
+                <Link
+                    to=""
                     className={activeTab === 'Chats' ? 'active' : ''}
                     onClick={() => setActiveTab('Chats')}
                 >
                     <ICONS.Chat className='icon' />
                     Chats
-                </a>
+                </Link>
 
-                <a href=""
+                <Link
+                    to=""
                     className={activeTab === 'Status' ? 'active' : ''}
-                    onClick={() => setActiveTab('Status')}                
+                    onClick={() => setActiveTab('Status')}
                 >
-                    <ICONS.Status className='icon'/>
+                    <ICONS.Status className='icon' />
                     Updates
-                </a>
+                </Link>
 
-                <a href=""
-                    className={activeTab === 'Status' ? 'active' : ''}
-                    onClick={() => setActiveTab('Status')}                
+                <Link
+                    to=""
+                    className={activeTab === 'Communities' ? 'active' : ''}
+                    onClick={() => setActiveTab('Communities')}
                 >
-                    <ICONS.People className='icon'/>
+                    <ICONS.People className='icon' />
                     Communities
-                </a>
+                </Link>
 
-                <a href=""
+                <Link
+                    to=""
                     className={activeTab === 'Llamadas' ? 'active' : ''}
-                    onClick={() => setActiveTab('Llamadas')}                
+                    onClick={() => setActiveTab('Llamadas')}
                 >
                     <ICONS.Phone className='icon' />
                     Calls
-                </a>
+                </Link>
             </nav>
         </div>
     )

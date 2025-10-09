@@ -16,10 +16,7 @@ const ContactListContextProvider = (props) => {
     const [searchTerm, setSearchTerm] = useState('')
 
     function onChangeSearchTerm (event){
-        //Esta funcion estara conectada al input
-        //Capturamos el valor del input
         const new_search_term = event.target.value
-        //Lo guardamos en el estado de termino de busqueda
         setSearchTerm(new_search_term)
     }
 
@@ -31,7 +28,7 @@ const ContactListContextProvider = (props) => {
                 setContactList(contacts_list_response)
                 setIsContactListLoading(false)
             },
-            100
+            350
         )
     }
 

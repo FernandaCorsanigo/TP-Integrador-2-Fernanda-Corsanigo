@@ -22,7 +22,7 @@ const ContactDetailContextProvider = (props) => {
                 setContactDetailed(contact)
                 setIsContactDetailLoading(false)
         },
-        300
+        400
     )
     }
 

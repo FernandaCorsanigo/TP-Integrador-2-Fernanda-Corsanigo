@@ -1,80 +1,79 @@
-
-.search-bar-section{
+.search-bar-section {
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 100%;
+    padding-bottom: 5px;
 }
 
-.search-bar-container{
+/* Contenedor de la barra de búsqueda */
+.search-bar-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-} 
-
-.search-bar-buttons {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-
-.search-icon{
-    margin: 0px 15px;
-    font-size: 20px;
-    color: rgb(54, 168, 103);
-}
-
-h1 {
-    color: rgb(54, 168, 103); 
-    font-weight: 750;
-    font-size: 22px;
-    padding: 10px 0px;
-    line-height: 40px;
-}
-
-.search-bar-container {
+    height: 40px;
     background-color: #f0f2f5;
     border-radius: 16px;
-    height: 40px;
 }
 
 .search-bar-container i {
     margin-right: 8px;
 }
 
+/* Input de búsqueda */
 .search-bar {
+    flex: 1;
     border: none;
     outline: none;
     background: transparent;
-    flex: 1;
     font-size: 14px;
 }
 
+/* Botones dentro de la barra de búsqueda */
 .search-bar-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
     margin-top: 8px;
 }
 
 .search-bar-buttons button {
-    background-color: white;       
-    border: 1px solid #d1d3d4;   
-    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
     padding: 0 12px;
+    border: 1px solid #d1d3d4;
+    border-radius: 16px;
+    background-color: white;
     font-size: 13px;
     color: #202c33;
     cursor: pointer;
     transition: all 0.2s;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: auto;
     white-space: nowrap;
 }
 
 .search-bar-buttons button.active {
-    background-color: #dcf8c6;  
-    border-color: #25D366;      
-    color: #075E54;             
+    background-color: #dcf8c6;
+    border-color: #25D366;
+    color: #075E54;
+}
+
+
+.search-icon {
+    margin: 0 15px;
+    font-size: 20px;
+    color: rgb(54, 168, 103);
+}
+
+
+h1 {
+    color: rgb(54, 168, 103);
+    font-weight: 750;
+    font-size: 22px;
+    padding: 10px 0;
+    line-height: 40px;
 }
