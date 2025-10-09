@@ -6,6 +6,7 @@ import { LiaSearchSolid } from "react-icons/lia";
 import { VscArrowLeft } from "react-icons/vsc";
 import { BiSolidDownArrow } from "react-icons/bi";
 import { HiOutlineLockClosed } from "react-icons/hi2";
+import { MdOutlinePeopleAlt } from "react-icons/md";
 const MetaAIIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
         <defs>
@@ -35,7 +36,8 @@ const ICONS = {
     Arrow: VscArrowLeft,
     ArrowDown: BiSolidDownArrow,
     Whatsapp: BsWhatsapp,
-    Lock: HiOutlineLockClosed
+    Lock: HiOutlineLockClosed,
+    People: MdOutlinePeopleAlt
 }
 
 export default ICONS

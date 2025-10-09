@@ -100,7 +100,15 @@ const Navbar = () => {
                     onClick={() => setActiveTab('Status')}                
                 >
                     <ICONS.Status className='icon'/>
-                    Novedades
+                    Updates
+                </a>
+
+                <a href=""
+                    className={activeTab === 'Status' ? 'active' : ''}
+                    onClick={() => setActiveTab('Status')}                
+                >
+                    <ICONS.People className='icon'/>
+                    Communities
                 </a>
 
                 <a href=""
@@ -108,7 +116,7 @@ const Navbar = () => {
                     onClick={() => setActiveTab('Llamadas')}                
                 >
                     <ICONS.Phone className='icon' />
-                    Llamadas
+                    Calls
                 </a>
             </nav>
         </div>

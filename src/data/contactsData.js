@@ -157,30 +157,66 @@ const contacts=[
     },
     {
         id: 4,
-        name: "Lourdes",
-        avatar: "https://optisalud.cl/cdn/shop/collections/Coleccion_Mujer_1400x_40e49f41-fe7e-4cf6-9f63-e3edc8bedacb.jpg?v=1666118687&width=1400",
+        name: "Gonzalo",
+        avatar: "https://www.shutterstock.com/image-photo/portrait-handsome-bearded-man-headphones-260nw-2383568109.jpg",
         last_time_connected: "ahora",
         messages: [
-            {
-                id: 1,
-                author: 'Lourdes',
-                content: "Hola, este es mi nro para que me agendes! 😂😂😂",
-                timestamp: '19:30'
-            }
+        {
+            id: 1,
+            author: 'Gonzalo',
+            content: "Hola Fer, ¿cómo va todo?",
+            timestamp: '19:30'
+        },
+        {
+            id: 2,
+            author: 'Yo',
+            content: "Hola Gonza! Todo bien, acá terminando unas cosas.",
+            timestamp: '19:32'
+        },
+        {
+            id: 3,
+            author: 'Gonzalo',
+            content: "Buenísimo. ¿Vas a venir mañana a almorzar?",
+            timestamp: '19:33'
+        },
+        {
+            id: 4,
+            author: 'Yo',
+            content: "Sí, confirmadísimo. Nos vemos ahí 👍",
+            timestamp: '19:35'
+        }
         ]
     },
         {
         id: 5,
-        name: "Lourdes",
-        avatar: "https://optisalud.cl/cdn/shop/collections/Coleccion_Mujer_1400x_40e49f41-fe7e-4cf6-9f63-e3edc8bedacb.jpg?v=1666118687&width=1400",
-        last_time_connected: "ahora",
+        name: "Mami",
+        avatar: "https://i.pinimg.com/736x/6c/ed/13/6ced133c99d2e3480c00f55b9ebf354b.jpg",
+        last_time_connected: "8 de Ocutubre 2025",
         messages: [
-            {
-                id: 1,
-                author: 'Lourdes',
-                content: "Hola, este es mi nro para que me agendes! 😂😂😂",
-                timestamp: '19:30'
-            }
+{
+            id: 1,
+            author: 'Mami',
+            content: "¿Ya comiste algo?",
+            timestamp: '20:00'
+        },
+        {
+            id: 2,
+            author: 'Yo',
+            content: "Todavía no, estaba ocupada, ahora caliento algo.",
+            timestamp: '20:02'
+        },
+        {
+            id: 3,
+            author: 'Mami',
+            content: "No te olvides de tomar agua también 💧",
+            timestamp: '20:03'
+        },
+        {
+            id: 4,
+            author: 'Yo',
+            content: "Tranqui, ya me sirvo un vaso 😊",
+            timestamp: '20:05'
+        }
         ]
     }
 ]
