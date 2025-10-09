@@ -32,7 +32,7 @@ function MessageScreen() {
                             <MessagesList
                             messages={contactDetailed.messages} />
                         </>
-                        :<span>No contact selected</span>
+                        :<span className='no-contact-selected'>No contact selected</span>
                     )
                 }
                 <div className='message-screen__new-message-container'>
