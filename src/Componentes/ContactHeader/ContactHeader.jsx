@@ -37,7 +37,7 @@ const ContactHeader = ({ contact }) => {
                     </button>
                     <div className="btn-phone-container">
                         <button className="btn-phone">
-                            <ICONS.Phone onClick={'Llamadas'} />
+                            <ICONS.Phone/>
 
                         </button>
                         <button className="btn-arrow-down">
